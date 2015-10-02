@@ -2,10 +2,16 @@ public class Tester
 {
 	public static void main(String[] args)
 	{
+		/*
 		int[] nums = {1, 3, 0, 6, 0, 5};
 		MoveZeroes zeroes = new MoveZeroes();
 		zeroes.moveZeroes(nums);
 		printIntArray(nums);
+		*/
+		Anagram anagram = new Anagram();
+		String thing1 = "asdf";
+		String thing2 = "asfc";
+		System.out.println(anagram.efficientIsAnagram(thing1, thing2));
 		
 	}
 	
