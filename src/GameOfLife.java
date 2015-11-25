@@ -65,7 +65,17 @@ public class GameOfLife
 			}
 		}
 		
-		Tester.printMatrix(nextBoard);
-		board = nextBoard;
+		//Tester.printMatrix(nextBoard);
+		//board = nextBoard;
+		
+		//set the board to the nextBoard
+		for(int y = 0; y < board.length; y++)
+		{
+		    for(int x = 0; x < board[y].length; x++)
+		    {
+		        board[y][x] = nextBoard[y][x];
+		    }
+		}
+		
 	}
 }

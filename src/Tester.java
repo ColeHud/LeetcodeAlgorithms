@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Tester 
 {
-	public static void main(String[] args) throws FileNotFoundException
+	public static void main(String[] args) throws FileNotFoundException, InterruptedException
 	{
 		/*
 		int[] nums = {1, 3, 0, 6, 0, 5};
@@ -102,8 +102,8 @@ public class Tester
 		}
 		*/
 		
-		GameOfLife conway = new GameOfLife();
 		/*
+		GameOfLife conway = new GameOfLife();
 		int[][] board = {
 				{0, 0, 0, 0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0, 0, 0, 0},
@@ -114,13 +114,23 @@ public class Tester
 				{0, 0, 0, 0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0, 0, 0, 0},
 		};
+		
+		
+		while(true)
+		{
+			conway.gameOfLife(board);
+			try { 
+				Runtime.getRuntime().exec("clear");
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		*/
 		
-		int[][] board = {
-				{1}
-		};
-		
-		conway.gameOfLife(board);
+		IntegerToEnglish intToEnglish = new IntegerToEnglish();
+		System.out.println(intToEnglish.numberToWords(1002023));
 		
 		
 	}

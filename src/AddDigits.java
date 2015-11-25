@@ -1,35 +1,23 @@
 public class AddDigits 
 {
-	public int addDigits(int num) 
+	public int addDigits(int num)
 	{
-		boolean shouldReturn = false;
-		int sum = addUpDigits(num);
-		while(shouldReturn == false)
+		String stringNum = num + "";
+		int addedNum = 0;
+		
+		for(int i = 0; i < stringNum.length(); i++)
 		{
-			String stringySum = "" + sum;
-			if(stringySum.length() == 1)
-			{
-				return sum;
-			}
-			else
-			{
-				sum = addUpDigits(sum);
-			}
+			int numAtPlace = Integer.parseInt(stringNum.charAt(i) + "");
+			addedNum += numAtPlace;
 		}
-
-		return 0;
-	}
-
-	public int addUpDigits(int number)
-	{
-		String stringyNum = "" + number;
-		int placeHolderNum = 0;
-		for(int i = 0; i < stringyNum.length(); i++)
+		
+		if(addedNum > 9)
 		{
-			int current = Integer.parseInt(stringyNum.substring(i, i+1));
-			placeHolderNum += current;
+			return addDigits(addedNum);
 		}
-
-		return placeHolderNum;
+		else
+		{
+			return addedNum;
+		}
 	}
 }
